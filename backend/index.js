@@ -22,12 +22,8 @@ const corsOptions = {
   credentials: true,
 };
 
-app.use(cors(corsOprion));
+app.use(cors(corsOptions));
 
-app.use(cors({
-  origin: "*",
-  credentials: true,
-}));
 
 app.use("/user", userRouter);
 app.use("/company", companyRouter);

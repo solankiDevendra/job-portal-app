@@ -52,13 +52,13 @@ export const register = async (req, res) => {
 //login user...............
 
 export const login = async (req, res) => {
-  console.log("Login Controller invoked......");
-  console.log("Login Request:", req.body); // Debugging ke liye
-});
   try {
+    console.log("Login Controller invoked......");
+    console.log("Login Request:", req.body); // Debugging ke liye
+
     const { email, password, role } = req.body;
 
-    if ((!email, !password, !role)) {
+    if (!email || !password || !role) {
       return res
         .status(400)
         .json({ message: "Something is missing", success: false });
@@ -108,19 +108,21 @@ export const login = async (req, res) => {
       .status(200)
       .cookie("token", token, {
         maxAge: 1 * 24 * 60 * 60 * 1000,
-        httpsOnly: true,
+        httpOnly: true,
         sameSite: "strict",
       })
       .json({
         token,
-        message: `welcome back ${user.fullName}`,
+        message: `Welcome back ${user.fullName}`,
         user,
         success: true,
       });
   } catch (error) {
     console.log(error);
+    res.status(500).json({ message: "Internal Server Error", success: false });
   }
 };
+
 
 //logout user.....
 

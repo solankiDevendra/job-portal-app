@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOprion = {
-  origin: "http://localhost:5173",
+  origin: "https://jobportal-anbi.onrender.com",
   credentials: true,
 };
 

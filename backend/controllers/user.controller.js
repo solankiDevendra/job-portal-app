@@ -52,6 +52,7 @@ export const register = async (req, res) => {
 //login user...............
 
 export const login = async (req, res) => {
+  console.log("Login Controller invoked......")
   try {
     const { email, password, role } = req.body;
 

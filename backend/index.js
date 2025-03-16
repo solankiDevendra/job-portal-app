@@ -21,6 +21,7 @@ const corsOptions = {
   origin: ["https://job-portal-59y6.onrender.com"], 
   credentials: true,
 };
+
 app.use(cors(corsOprion));
 
 app.use(cors({

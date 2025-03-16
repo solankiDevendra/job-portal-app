@@ -33,9 +33,10 @@ const Login = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
+console.log("login in frontend");
     try {
       dispatch(setLoading(true));
+      console.log("login in frontend in api");
       const res = await axios.post('${USER_API_END_POINT}/login', input, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,

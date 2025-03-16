@@ -17,12 +17,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const corsOprion = {
-  origin: "https://job-portal-59y6.onrender.com",
+const corsOptions = {
+  origin: ["https://job-portal-59y6.onrender.com"], 
   credentials: true,
 };
-
 app.use(cors(corsOprion));
+
+app.use(cors({
+  origin: "*",
+  credentials: true,
+}));
 
 app.use("/user", userRouter);
 app.use("/company", companyRouter);

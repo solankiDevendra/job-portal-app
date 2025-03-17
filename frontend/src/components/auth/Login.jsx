@@ -38,7 +38,7 @@ console.log("login in frontend");
       dispatch(setLoading(true));
       console.log("login in frontend in api");
       console.log("call login api ",USER_API_END_POINT);
-      const res = await axios.post('${USER_API_END_POINT}/login', input, {
+      const res = await axios.post(`${USER_API_END_POINT}/login`, input, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });

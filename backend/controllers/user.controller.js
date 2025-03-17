@@ -53,9 +53,7 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    console.log("Login Controller invoked......");
-    console.log("Login Request:", req.body); // Debugging ke liye
-
+   
     const { email, password, role } = req.body;
 
     if (!email || !password || !role) {

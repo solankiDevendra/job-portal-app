@@ -26,8 +26,7 @@ const HeroSection = () => {
           <span className="text-indigo-700">Dream Jobs</span>
         </h1>
         <p className="text-sm sm:text-base max-w-xl mx-auto px-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-          aspernatur temporibus nihil tempora dolor!
+          Find and apply for the best job opportunities that match your skills and career goals—all in one place.
         </p>
         <div className="flex w-full sm:w-[80%] md:w-[60%] lg:w-[40%] shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-2 sm:gap-4 mx-auto">
           <input
